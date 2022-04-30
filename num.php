@@ -39,17 +39,17 @@ $sql="select * from phpyun_ad_class where id=$id limit 0,1";
 echo "注入后的SQL语句为：".$sql."<br>";
 
 $do=mysqli_query($conn,$sql);
-$row=mysqli_fetch_row($do);
-if($row)
+//$row=mysqli_fetch_row($do);
+if($do)
 {
 echo "该sql语句成功执行！<br>执行结果为:OK<br>";
-/*  while($row=mysqli_fetch_row($do))
+while($row=mysqli_fetch_row($do))
 {
    echo $row[0]."<--->".$row[1]."<--->".$row[2]."<--->".$row[3];
    
    echo "<br>";
 }
-*/
+
 }
 else
  
