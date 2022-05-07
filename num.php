@@ -19,9 +19,9 @@ if (!$conn) {
     echo "数据库连接成功！<br>";
 }
 
-$db = mysqli_select_db($conn, "exam");
+$db = mysqli_select_db($conn, "testdb");
 $sql = mysqli_query($conn, 'SET NAMES utf8');
-$sql = "select * from phpyun_ad_class where id=$id limit 0,1";
+$sql = "select * from testtable where id=$id limit 0,1";
 
 echo "注入后的SQL语句为：" . $sql . "<br>";
 
